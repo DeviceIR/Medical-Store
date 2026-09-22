@@ -1,0 +1,14 @@
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: medical_store
+    ports:
+      - "5432:5432"
+    volumes:
+      - medical_pg:/var/lib/postgresql/data
+
+volumes:
+  medical_pg:
